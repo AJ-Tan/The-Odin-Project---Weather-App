@@ -111,6 +111,7 @@
 .weather-today__location {
   display: flex;
   justify-content: space-between;
+  gap: 2rem;
   padding: 1rem 3.5rem;
   height: 14rem;
 }
@@ -119,6 +120,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  width: 100%;
+  max-width: 30rem;
+  container: details / inline-size;
+}
+
+@container details (max-width: 300px) {
+  #location-name {
+    font-size: clamp(1.75rem, calc((100cqw - 50px) * 0.16), 2.5rem);
+  }
+
+  #location-temp {
+    font-size: clamp(2.75rem, calc((100cqw - 50px) * 0.22), 3.5rem);
+  }
+}
+
+#location-temp::after {
+  content: "°";
 }
 
 .details-group {
@@ -182,19 +200,60 @@
 
 .air-conditions__list li {
   display: flex;
-  gap: 1rem;
 }
 
-.air-conditions__image-container {
-  width: 1.5rem;
-  background-color: gray;
+.temp-icon,
+.wind-icon,
+.rain-icon,
+.uv-icon {
   color: transparent;
+  width: 2rem;
+
+  svg {
+    width: 100%;
+    height: max-content;
+    display: flex;
+  }
+}
+
+.temp-icon path {
+  stroke: var(--color-sub);
+}
+
+.wind-icon svg path {
+  fill: var(--color-sub);
+  transform: scale(0.8);
+}
+
+.rain-icon svg {
+  fill: var(--color-sub);
+
+  path {
+    transform: translateX(10%) scale(0.8);
+  }
+}
+
+.uv-icon svg path {
+  fill: var(--color-sub);
+  transform: scale(1.3) translate(-22%, -13%);
 }
 
 .air-conditions__details {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+}
+
+#air-conditions-feel::after {
+  content: "°";
+}
+
+#air-conditions-wind::after {
+  content: " mph";
+}
+
+#air-conditions-rain::after {
+  content: "%";
 }
 
 /* 7-day forecast */

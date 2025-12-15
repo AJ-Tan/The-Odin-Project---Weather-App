@@ -31,10 +31,13 @@
           <section class="weather-today__location">
             <div class="location__details">
               <div class="details-group">
-                <h2 class="text-main-xl-normal">Madrid</h2>
-                <span class="text-sub-md">Chance of rain: 0%</span>
+                <h2 id="location-name" class="text-main-xl-normal">-</h2>
+                <span class="text-sub-md"
+                  >Chance of rain:
+                  <span id="location-chance-rain">-</span>%</span
+                >
               </div>
-              <span class="text-main-2xl-bold">31°</span>
+              <span id="location-temp" class="text-main-2xl-bold">-</span>
             </div>
             <div class="location__weather-image-container">Sunny</div>
           </section>
@@ -77,33 +80,39 @@
             <h2 class="text-sub-md-bold">AIR CONDITIONS</h2>
             <ul class="air-conditions__list">
               <li>
-                <div class="air-conditions__image-container">Temp Icon</div>
+                <div class="temp-icon">Temp Icon</div>
                 <div class="air-conditions__details">
                   <span class="text-sub-2md">Real Feel</span>
-                  <span class="text-main-2lg-bold">30°</span>
+                  <span id="air-conditions-feel" class="text-main-2lg-bold"
+                    >-</span
+                  >
                 </div>
               </li>
               <li>
-                <div class="air-conditions__image-container">Wind Icon</div>
+                <div class="wind-icon">Wind Icon</div>
                 <div class="air-conditions__details">
                   <span class="text-sub-2md">Wind</span>
-                  <span class="text-main-2lg-bold">0.2 km/h</span>
+                  <span id="air-conditions-wind" class="text-main-2lg-bold"
+                    >-</span
+                  >
                 </div>
               </li>
               <li>
-                <div class="air-conditions__image-container">
-                  chance-rain Icon
-                </div>
+                <div class="rain-icon">rain icon</div>
                 <div class="air-conditions__details">
                   <span class="text-sub-2md">Chance of rain</span>
-                  <span class="text-main-2lg-bold">0%</span>
+                  <span id="air-conditions-rain" class="text-main-2lg-bold"
+                    >-</span
+                  >
                 </div>
               </li>
               <li>
-                <div class="air-conditions__image-container">UV Icon</div>
+                <div class="uv-icon">UV Icon</div>
                 <div class="air-conditions__details">
                   <span class="text-sub-2md">UV Index</span>
-                  <span class="text-main-2lg-bold">3</span>
+                  <span id="air-conditions-uv" class="text-main-2lg-bold"
+                    >-</span
+                  >
                 </div>
               </li>
             </ul>

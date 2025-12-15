@@ -1,9 +1,13 @@
+import { pubsub } from "./PubSub";
+
 class LocationList {
+  #locationRawData = null;
   #locationData = null;
   #selectedLocation = null;
   constructor(locationListPromise) {
     locationListPromise
       .then((res) => {
+        this.#locationRawData = res.data;
         this.#locationData = res.data.reduce((overall, data) => {
           const expandCities = data.cities.map((city) => {
             return `${city}, ${data.country}`;
@@ -26,6 +30,12 @@ class LocationList {
 
   setLocation(location) {
     this.#selectedLocation = location;
+    pubsub.publish("location", location);
+  }
+
+  setLocationISO2(iso2) {
+    const location = this.#locationRawData.filter((data) => data.iso2 === iso2);
+    pubsub.publish("location", location[0].country);
   }
 }
 
