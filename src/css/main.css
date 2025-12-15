@@ -1,0 +1,159 @@
+[class^="weather-card"] {
+  background-color: var(--color-card-bg);
+  border-radius: 1rem;
+}
+
+.weather-data__container {
+  display: flex;
+  gap: 2rem;
+}
+
+#input-search {
+  padding: 1rem 0.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  outline: none;
+  background-color: var(--color-card-bg);
+  width: 100%;
+  max-width: 30rem;
+  margin-block: 1.5rem;
+}
+
+#input-search,
+#input-search::placeholder {
+  color: var(--color-main);
+}
+
+/* Weather Today */
+
+.weather-today {
+  flex: 1;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.weather-today__location {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 3.5rem;
+  height: 14rem;
+}
+
+.location__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.details-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.location__weather-image-container {
+  height: 100%;
+  aspect-ratio: 1/1;
+  background-color: gray;
+  color: transparent;
+}
+
+/* Today Forecast */
+.weather-card__todays-forecast {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem;
+}
+
+.todays-forecast__list {
+  display: flex;
+}
+
+.todays-forecast__list li {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.todays-forecast__list li:not(:last-child) {
+  border-right: 1px solid var(--color-border);
+}
+
+.todays-forecast__image {
+  color: transparent;
+  width: 3rem;
+  background-color: gray;
+  color: transparent;
+  aspect-ratio: 1/1;
+}
+
+/* Today Air Conditions */
+.weather-card__air-conditions {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1.75rem 2rem;
+}
+
+.air-conditions__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2.5rem;
+}
+
+.air-conditions__list li {
+  display: flex;
+  gap: 1rem;
+}
+
+.air-conditions__image-container {
+  width: 1.5rem;
+  background-color: gray;
+  color: transparent;
+}
+
+.air-conditions__details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+/* 7-day forecast */
+.weather-card__forecast {
+  padding: 2rem;
+  width: 26rem;
+}
+
+.forecast-list {
+  display: grid;
+  grid-template-rows: repeat(auto-fit, 1fr);
+  height: 100%;
+
+  li {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  li:not(:last-child) {
+    border-bottom: 1px solid var(--color-border);
+  }
+
+  .forecast-weather {
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .weather-img-container {
+    aspect-ratio: 1/1;
+    width: 2rem;
+
+    background-color: gray;
+    color: transparent;
+  }
+}

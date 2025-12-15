@@ -1,0 +1,38 @@
+@import "./css/utility.css";
+@import "./css/main.css";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-bg: rgb(11, 18, 30);
+  --color-card-bg: rgb(32, 43, 60);
+  --color-main: rgb(255, 255, 255);
+  --color-sub: rgb(139, 151, 162);
+  --color-border: rgba(139, 151, 162, 0.3);
+  font-size: 1rem;
+}
+
+body {
+  background-color: var(--color-bg);
+  font-family: Roboto, Verdana, sans-serif;
+  min-height: 100vh;
+  padding: 2rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.page-header,
+.page-content {
+  max-width: 90rem;
+  margin-inline: auto;
+}
+
+input {
+  font: inherit;
+}

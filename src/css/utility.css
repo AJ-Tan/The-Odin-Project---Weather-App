@@ -1,0 +1,47 @@
+[class^="text-main"] {
+  color: var(--color-main);
+}
+
+[class^="text-main-2xl"] {
+  font-size: 3.5rem;
+}
+
+[class^="text-main-xl"] {
+  font-size: 2.5rem;
+}
+
+[class^="text-main-2lg"] {
+  font-size: 2rem;
+}
+
+[class^="text-main-lg"] {
+  font-size: 1.5rem;
+}
+
+[class^="text-main-md"] {
+  font-size: 1rem;
+}
+
+[class^="text-sub"] {
+  color: var(--color-sub);
+}
+
+[class^="text-sub-2md"] {
+  font-size: 1.25rem;
+}
+
+[class^="text-sub-md"] {
+  font-size: 1rem;
+}
+
+[class$="bold"] {
+  font-weight: 700;
+}
+
+[class$="normal"] {
+  font-weight: 500;
+}
+
+[class$="thin"] {
+  font-weight: 300;
+}
