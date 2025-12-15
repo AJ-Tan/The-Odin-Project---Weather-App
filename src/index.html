@@ -16,12 +16,16 @@
       <h1 class="text-main-xl">Weather App</h1>
     </header>
     <main class="page-content">
-      <input
-        type="text"
-        name="inputSearch"
-        id="input-search"
-        placeholder="Search for cities"
-      />
+      <div class="search-group">
+        <input
+          type="text"
+          name="inputSearch"
+          id="input-search"
+          placeholder="Search for cities"
+          autocomplete="off"
+        />
+        <ul class="search-auto-complete"></ul>
+      </div>
       <div class="weather-data__container">
         <section class="weather-today">
           <section class="weather-today__location">

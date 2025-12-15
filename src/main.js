@@ -1,5 +1,5 @@
 import "./style.css";
+import "./js/events";
+import { locationListData } from "./js/LocationList";
 
-const x = () => {};
-
-x();
+locationListData.getLocationData();
