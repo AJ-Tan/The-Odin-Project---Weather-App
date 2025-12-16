@@ -125,6 +125,13 @@
   container: details / inline-size;
 }
 
+#location-name {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  overflow: hidden;
+}
+
 @container details (max-width: 300px) {
   #location-name {
     font-size: clamp(1.75rem, calc((100cqw - 50px) * 0.16), 2.5rem);
@@ -148,8 +155,12 @@
 .location__weather-image-container {
   height: 100%;
   aspect-ratio: 1/1;
-  background-color: gray;
   color: transparent;
+
+  path,
+  svg {
+    fill: var(--color-main);
+  }
 }
 
 /* Today Forecast */
@@ -179,9 +190,13 @@
 .todays-forecast__image {
   color: transparent;
   width: 3rem;
-  background-color: gray;
   color: transparent;
   aspect-ratio: 1/1;
+
+  svg,
+  svg path {
+    fill: var(--color-main);
+  }
 }
 
 /* Today Air Conditions */
@@ -208,12 +223,6 @@
 .uv-icon {
   color: transparent;
   width: 2rem;
-
-  svg {
-    width: 100%;
-    height: max-content;
-    display: flex;
-  }
 }
 
 .temp-icon path {
@@ -270,27 +279,54 @@
   li {
     display: flex;
     width: 100%;
-    justify-content: space-between;
     align-items: center;
     padding-block: 1rem;
+
+    & > * {
+    }
+
+    & > *:nth-child(1) {
+      flex-basis: 3rem;
+    }
+
+    & > *:nth-child(2) {
+      flex: 1;
+    }
+
+    & > *:nth-child(3) {
+      flex-basis: 3rem;
+      text-align: end;
+    }
   }
 
   li:not(:last-child) {
     border-bottom: 1px solid var(--color-border);
   }
 
+  .forecast-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+
   .forecast-weather {
     display: flex;
     align-items: center;
+    justify-content: start;
     gap: 1.5rem;
+    width: 8.8rem;
   }
 
   .weather-img-container {
+    display: flex;
     aspect-ratio: 1/1;
     width: 2rem;
 
-    background-color: gray;
     color: transparent;
+  }
+
+  path,
+  svg {
+    fill: var(--color-main);
   }
 }
 

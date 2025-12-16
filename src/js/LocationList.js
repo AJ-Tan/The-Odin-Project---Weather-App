@@ -1,13 +1,14 @@
 import { pubsub } from "./PubSub";
 
 class LocationList {
-  #locationRawData = null;
-  #locationData = null;
+  #locationRawData = {};
+  #locationData = [];
   #selectedLocation = null;
   constructor(locationListPromise) {
     locationListPromise
       .then((res) => {
         this.#locationRawData = res.data;
+        this.setUserLocation();
         this.#locationData = res.data.reduce((overall, data) => {
           const expandCities = data.cities.map((city) => {
             return `${city}, ${data.country}`;
@@ -21,6 +22,16 @@ class LocationList {
       });
   }
 
+  setUserLocation() {
+    fetch("https://ipinfo.io/json")
+      .then((res) => {
+        return res.json();
+      })
+      .then((res) => {
+        locationListData.setLocationISO2(res.country);
+      });
+  }
+
   getLocationData(filterText) {
     if (!this.#locationData) return;
     return this.#locationData
@@ -30,12 +41,12 @@ class LocationList {
 
   setLocation(location) {
     this.#selectedLocation = location;
-    pubsub.publish("location", location);
+    pubsub.publish("location", this.#selectedLocation);
   }
 
   setLocationISO2(iso2) {
-    const location = this.#locationRawData.filter((data) => data.iso2 === iso2);
-    pubsub.publish("location", location[0].country);
+    const location = this.#locationRawData.find((data) => data.iso2 === iso2);
+    pubsub.publish("location", location.country);
   }
 }
 

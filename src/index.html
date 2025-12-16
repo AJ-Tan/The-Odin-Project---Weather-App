@@ -12,174 +12,88 @@
     />
   </head>
   <body>
-    <header class="page-header">
-      <h1 class="text-main-xl">Weather App</h1>
-    </header>
-    <main class="page-content">
-      <div class="search-group">
-        <input
-          type="text"
-          name="inputSearch"
-          id="input-search"
-          placeholder="Search for cities"
-          autocomplete="off"
-        />
-        <ul class="search-auto-complete"></ul>
-      </div>
-      <div class="weather-data__container">
-        <section class="weather-today">
-          <section class="weather-today__location">
-            <div class="location__details">
-              <div class="details-group">
-                <h2 id="location-name" class="text-main-xl-normal">-</h2>
-                <span class="text-sub-md"
-                  >Chance of rain:
-                  <span id="location-chance-rain">-</span>%</span
-                >
+    <div class="content">
+      <header class="page-header">
+        <h1 class="text-main-xl">Weather App</h1>
+      </header>
+      <main class="page-content">
+        <div class="search-group">
+          <input
+            type="text"
+            name="inputSearch"
+            id="input-search"
+            placeholder="Search for cities"
+            autocomplete="off"
+          />
+          <ul class="search-auto-complete"></ul>
+        </div>
+        <div class="weather-data__container">
+          <section class="weather-today">
+            <section class="weather-today__location">
+              <div class="location__details">
+                <div class="details-group">
+                  <h2 id="location-name" class="text-main-xl-normal">-</h2>
+                  <span class="text-sub-md"
+                    >Chance of rain:
+                    <span id="location-chance-rain">-</span>%</span
+                  >
+                </div>
+                <span id="location-temp" class="text-main-2xl-bold">-</span>
               </div>
-              <span id="location-temp" class="text-main-2xl-bold">-</span>
-            </div>
-            <div class="location__weather-image-container">Sunny</div>
+              <div class="location__weather-image-container">Sunny</div>
+            </section>
+            <section class="weather-card__todays-forecast">
+              <h2 class="text-sub-md-bold">TODAY'S FORECAST</h2>
+              <ul class="todays-forecast__list"></ul>
+            </section>
+            <section class="weather-card__air-conditions">
+              <h2 class="text-sub-md-bold">AIR CONDITIONS</h2>
+              <ul class="air-conditions__list">
+                <li>
+                  <div class="temp-icon">Temp Icon</div>
+                  <div class="air-conditions__details">
+                    <span class="text-sub-2md">Real Feel</span>
+                    <span id="air-conditions-feel" class="text-main-2lg-bold"
+                      >-</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="wind-icon">Wind Icon</div>
+                  <div class="air-conditions__details">
+                    <span class="text-sub-2md">Wind</span>
+                    <span id="air-conditions-wind" class="text-main-2lg-bold"
+                      >-</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="rain-icon">rain icon</div>
+                  <div class="air-conditions__details">
+                    <span class="text-sub-2md">Chance of rain</span>
+                    <span id="air-conditions-rain" class="text-main-2lg-bold"
+                      >-</span
+                    >
+                  </div>
+                </li>
+                <li>
+                  <div class="uv-icon">UV Icon</div>
+                  <div class="air-conditions__details">
+                    <span class="text-sub-2md">UV Index</span>
+                    <span id="air-conditions-uv" class="text-main-2lg-bold"
+                      >-</span
+                    >
+                  </div>
+                </li>
+              </ul>
+            </section>
           </section>
-          <section class="weather-card__todays-forecast">
-            <h2 class="text-sub-md-bold">TODAY'S FORECAST</h2>
-            <ul class="todays-forecast__list">
-              <li>
-                <span class="text-sub-md-bold">6:00 AM</span>
-                <div class="todays-forecast__image">Sunny</div>
-                <span class="text-main-lg-bold">25°</span>
-              </li>
-              <li>
-                <span class="text-sub-md-bold">6:00 AM</span>
-                <div class="todays-forecast__image">Sunny</div>
-                <span class="text-main-lg-bold">25°</span>
-              </li>
-              <li>
-                <span class="text-sub-md-bold">6:00 AM</span>
-                <div class="todays-forecast__image">Sunny</div>
-                <span class="text-main-lg-bold">25°</span>
-              </li>
-              <li>
-                <span class="text-sub-md-bold">6:00 AM</span>
-                <div class="todays-forecast__image">Sunny</div>
-                <span class="text-main-lg-bold">25°</span>
-              </li>
-              <li>
-                <span class="text-sub-md-bold">6:00 AM</span>
-                <div class="todays-forecast__image">Sunny</div>
-                <span class="text-main-lg-bold">25°</span>
-              </li>
-              <li>
-                <span class="text-sub-md-bold">6:00 AM</span>
-                <div class="todays-forecast__image">Sunny</div>
-                <span class="text-main-lg-bold">25°</span>
-              </li>
-            </ul>
+          <section class="weather-card__forecast">
+            <h2 class="text-sub-md-bold">7-DAYS FORECAST</h2>
+            <ul class="forecast-list"></ul>
           </section>
-          <section class="weather-card__air-conditions">
-            <h2 class="text-sub-md-bold">AIR CONDITIONS</h2>
-            <ul class="air-conditions__list">
-              <li>
-                <div class="temp-icon">Temp Icon</div>
-                <div class="air-conditions__details">
-                  <span class="text-sub-2md">Real Feel</span>
-                  <span id="air-conditions-feel" class="text-main-2lg-bold"
-                    >-</span
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="wind-icon">Wind Icon</div>
-                <div class="air-conditions__details">
-                  <span class="text-sub-2md">Wind</span>
-                  <span id="air-conditions-wind" class="text-main-2lg-bold"
-                    >-</span
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="rain-icon">rain icon</div>
-                <div class="air-conditions__details">
-                  <span class="text-sub-2md">Chance of rain</span>
-                  <span id="air-conditions-rain" class="text-main-2lg-bold"
-                    >-</span
-                  >
-                </div>
-              </li>
-              <li>
-                <div class="uv-icon">UV Icon</div>
-                <div class="air-conditions__details">
-                  <span class="text-sub-2md">UV Index</span>
-                  <span id="air-conditions-uv" class="text-main-2lg-bold"
-                    >-</span
-                  >
-                </div>
-              </li>
-            </ul>
-          </section>
-        </section>
-        <section class="weather-card__forecast">
-          <h2 class="text-sub-md-bold">7-DAY FORECAST</h2>
-          <ul class="forecast-list">
-            <li>
-              <span class="text-sub-md">Today</span>
-              <div class="forecast-weather">
-                <div class="weather-img-container">Icon</div>
-                <span class="text-main-md-bold">Sunny</span>
-              </div>
-              <span class="text-main-md-bold">30°</span>
-            </li>
-            <li>
-              <span class="text-sub-md">Today</span>
-              <div class="forecast-weather">
-                <div class="weather-img-container">Icon</div>
-                <span class="text-main-md-bold">Sunny</span>
-              </div>
-              <span class="text-main-md-bold">30°</span>
-            </li>
-            <li>
-              <span class="text-sub-md">Today</span>
-              <div class="forecast-weather">
-                <div class="weather-img-container">Icon</div>
-                <span class="text-main-md-bold">Sunny</span>
-              </div>
-              <span class="text-main-md-bold">30°</span>
-            </li>
-            <li>
-              <span class="text-sub-md">Today</span>
-              <div class="forecast-weather">
-                <div class="weather-img-container">Icon</div>
-                <span class="text-main-md-bold">Sunny</span>
-              </div>
-              <span class="text-main-md-bold">30°</span>
-            </li>
-            <li>
-              <span class="text-sub-md">Today</span>
-              <div class="forecast-weather">
-                <div class="weather-img-container">Icon</div>
-                <span class="text-main-md-bold">Sunny</span>
-              </div>
-              <span class="text-main-md-bold">30°</span>
-            </li>
-            <li>
-              <span class="text-sub-md">Today</span>
-              <div class="forecast-weather">
-                <div class="weather-img-container">Icon</div>
-                <span class="text-main-md-bold">Sunny</span>
-              </div>
-              <span class="text-main-md-bold">30°</span>
-            </li>
-            <li>
-              <span class="text-sub-md">Today</span>
-              <div class="forecast-weather">
-                <div class="weather-img-container">Icon</div>
-                <span class="text-main-md-bold">Sunny</span>
-              </div>
-              <span class="text-main-md-bold">30°</span>
-            </li>
-          </ul>
-        </section>
-      </div>
-    </main>
+        </div>
+      </main>
+    </div>
   </body>
 </html>

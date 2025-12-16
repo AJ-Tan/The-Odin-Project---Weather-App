@@ -21,7 +21,13 @@ body {
   background-color: var(--color-bg);
   font-family: Roboto, Verdana, sans-serif;
   min-height: 100vh;
-  padding: 2rem;
+
+  display: grid;
+  align-items: center;
+}
+
+.content {
+  padding: 1rem 2rem;
 }
 
 ul {
@@ -36,4 +42,9 @@ ul {
 
 input {
   font: inherit;
+}
+
+svg {
+  width: 100%;
+  height: max-content;
 }

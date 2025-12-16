@@ -30,7 +30,28 @@ export const nodeLocationChanceRain = document.getElementById(
   "location-chance-rain"
 );
 export const nodeLocationTemp = document.getElementById("location-temp");
+export const nodeLocationImage = document.querySelector(
+  ".location__weather-image-container"
+);
+
+export const nodeTodaysForecastList = document.querySelector(
+  ".todays-forecast__list"
+);
+
+export const nodeAirConditionsFeel = document.getElementById(
+  "air-conditions-feel"
+);
+export const nodeAirConditionsWind = document.getElementById(
+  "air-conditions-wind"
+);
+export const nodeAirConditionsRain = document.getElementById(
+  "air-conditions-rain"
+);
+export const nodeAirConditionsUV = document.getElementById("air-conditions-uv");
+
 export const nodeTempIcon = document.querySelector(".temp-icon");
 export const nodeWindIcon = document.querySelector(".wind-icon");
 export const nodeRainIcon = document.querySelector(".rain-icon");
 export const nodeUVIcon = document.querySelector(".uv-icon");
+
+export const node7DaysForecastList = document.querySelector(".forecast-list");
